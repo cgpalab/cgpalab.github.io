@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CGPA Lab: Crash courses before your Mid and Final</title>
+<meta name="description" content="Focused crash courses for undergraduate students in Math, Physics, Electrical, Computer and Office Management. Built on your syllabus and your faculty's question pattern. Online, or offline within Bashundhara R/A.">
+<meta property="og:title" content="CGPA Lab: Crash courses before your Mid and Final">
+<meta property="og:description" content="Understand it, don't memorize it. Batches of 5 to 20 students. Online, or offline within Bashundhara R/A.">
+<meta property="og:image" content="https://cgpalab.github.io/assets/share.png">
+<meta property="og:url" content="https://cgpalab.github.io/">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Anek+Bangla:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E3B2C;--panel:#17503B;--line:#2B6248;--paper:#F3F6EA;--muted:#4A5E52;--soft:#D5E3D9;--yellow:#F6C945;--green:#1F7A4D;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 Inter,'Hind Siliguri',sans-serif}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.1;margin:0}
+html.bn h1,html.bn h2,html.bn h3{font-family:'Anek Bangla','Hind Siliguri',sans-serif;line-height:1.25}
+html.bn body{font-family:'Hind Siliguri',Inter,sans-serif}
+a{color:inherit}
+.bn-t{display:none}
+html.bn .en-t{display:none}
+html.bn .bn-t{display:inline}
+html.bn div.bn-t,html.bn p.bn-t,html.bn li.bn-t,html.bn ul.bn-t,html.bn ol.bn-t{display:block}
+html:not(.bn) div.en-t,html:not(.bn) p.en-t{display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:rgba(14,59,44,.97);color:var(--paper)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font:700 22px 'Space Grotesk',sans-serif;text-decoration:none}
+.logo span{color:var(--yellow)}
+nav{display:flex;align-items:center;gap:22px;font-size:15px}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;color:var(--yellow)}
+.lang{border:2px solid var(--line);background:none;color:var(--paper);border-radius:999px;padding:6px 14px;font:600 14px Inter,'Hind Siliguri',sans-serif;cursor:pointer}
+.lang:hover{border-color:var(--yellow)}
+@media(max-width:760px){nav a{display:none}}
+.hero{background:var(--ink);color:var(--paper);padding:72px 0 80px}
+.eyebrow{color:var(--yellow);font:700 14px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}
+html.bn .eyebrow{letter-spacing:0;font-size:16px}
+.hero h1{font-size:clamp(40px,7vw,76px);margin:18px 0 20px;max-width:820px}
+.hero p.lead{font-size:20px;color:var(--soft);max-width:680px;margin:0 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{background:var(--panel);border-radius:999px;padding:8px 18px;font-weight:600;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:14px;padding:15px 24px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.y{background:var(--yellow);color:var(--ink)}
+.btn.o{border:2px solid var(--line);color:var(--paper)}
+.btn.o.dark{border-color:var(--ink);color:var(--ink)}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.facts div{border-top:3px solid var(--yellow);padding-top:12px;font-weight:600}
+@media(max-width:760px){.facts{grid-template-columns:1fr}}
+section{padding:72px 0}
+section h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:12px}
+.sub{color:var(--muted);max-width:680px;margin:0 0 36px}
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g4,.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--white);border-radius:20px;padding:24px}
+.card .n{font:800 34px 'Space Grotesk',sans-serif;color:var(--green)}
+.card h3{font-size:20px;margin:6px 0 8px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .sub{color:var(--soft)}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0;border-top:2px solid var(--line)}
+.price b{font:800 30px 'Space Grotesk',sans-serif;color:var(--yellow);white-space:nowrap}
+.price span{font-weight:600}
+.disc{background:var(--panel);border-radius:20px;padding:24px}
+.disc .pc{font:800 40px 'Space Grotesk',sans-serif;color:var(--yellow)}
+.disc p{margin:4px 0 0;color:var(--soft);font-size:15px}
+.note{font-size:15px;color:var(--soft);margin-top:22px}
+ul.clean{margin:0;padding-left:20px}
+ul.clean li{margin:6px 0}
+details{background:var(--white);border-radius:16px;padding:18px 22px;margin-bottom:12px}
+summary{font-weight:700;cursor:pointer}
+details p{margin:10px 0 0;color:var(--muted)}
+.unis{display:flex;flex-wrap:wrap;gap:10px}
+.unis span{background:var(--white);border-radius:999px;padding:8px 18px;font-weight:700}
+footer{background:var(--ink);color:var(--soft);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:var(--yellow)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">CGPA <span>Lab</span></a>
+    <nav>
+      <a href="#how"><span class="en-t">How it works</span><span class="bn-t">যেভাবে কাজ করে</span></a>
+      <a href="#fees"><span class="en-t">Fees</span><span class="bn-t">ফি</span></a>
+      <a href="#faq"><span class="en-t">FAQ</span><span class="bn-t">প্রশ্নোত্তর</span></a>
+      <a href="#verify"><span class="en-t">Verify ID</span><span class="bn-t">আইডি যাচাই</span></a>
+      <button class="lang" id="lang" type="button" aria-label="Switch language">বাংলা</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en-t">Crash courses · Mid and Final</span><span class="bn-t">ক্র্যাশ কোর্স · মিড ও ফাইনাল</span></div>
+    <h1><span class="en-t">Understand it. Don't memorize it.</span><span class="bn-t">মুখস্থ নয়, বুঝে পাশ।</span></h1>
+    <p class="lead"><span class="en-t">Focused crash courses for undergraduate students, right before the Mid and Final. Built on your syllabus, your class lectures and your faculty's question pattern.</span><span class="bn-t">আন্ডারগ্র্যাজুয়েট শিক্ষার্থীদের জন্য মিড ও ফাইনালের ঠিক আগে গোছানো ক্র্যাশ কোর্স। আপনার সিলেবাস, ক্লাস লেকচার ও শিক্ষকের প্রশ্নের ধরন অনুযায়ী।</span></p>
+    <div class="chips">
+      <span class="chip"><span class="en-t">Math</span><span class="bn-t">গণিত</span></span>
+      <span class="chip"><span class="en-t">Physics</span><span class="bn-t">পদার্থবিজ্ঞান</span></span>
+      <span class="chip"><span class="en-t">Electrical</span><span class="bn-t">ইলেকট্রিক্যাল</span></span>
+      <span class="chip"><span class="en-t">Computer</span><span class="bn-t">কম্পিউটার</span></span>
+      <span class="chip"><span class="en-t">Office Management</span><span class="bn-t">অফিস ম্যানেজমেন্ট</span></span>
+    </div>
+    <div class="btns">
+      <a class="btn y" href="https://forms.gle/i42Vc5EgbGH9xJpL9" target="_blank" rel="noopener"><span class="en-t">Request your course</span><span class="bn-t">কোর্স রিকোয়েস্ট করুন</span> →</a>
+      <a class="btn o" href="#how"><span class="en-t">How it works</span><span class="bn-t">যেভাবে কাজ করে</span></a>
+    </div>
+    <div class="facts">
+      <div><span class="en-t">Batches of 5 to 20 students</span><span class="bn-t">৫ থেকে ২০ জনের ব্যাচ</span></div>
+      <div><span class="en-t">Online, or offline within Bashundhara R/A</span><span class="bn-t">অনলাইনে, অথবা বসুন্ধরা আ/এ-এর মধ্যে অফলাইনে</span></div>
+      <div><span class="en-t">Mock test, formula sheet and doubt group</span><span class="bn-t">মক টেস্ট, ফর্মুলা শিট ও ডাউট গ্রুপ</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="en-t">What you get</span><span class="bn-t">যা পাবেন</span></h2>
+    <p class="sub"><span class="en-t">Each crash course is planned around your own course, not a generic one.</span><span class="bn-t">প্রতিটি ক্র্যাশ কোর্স সাজানো হয় আপনার নিজের কোর্স অনুযায়ী, কোনো সাধারণ কোর্স অনুযায়ী নয়।</span></p>
+    <div class="grid g3">
+      <div class="card"><div class="n">5 / 6</div><h3><span class="en-t">Classes of 2 hours</span><span class="bn-t">২ ঘণ্টার ক্লাস</span></h3><p><span class="en-t">5 classes before the Mid, 6 before the Final.</span><span class="bn-t">মিডের আগে ৫টি, ফাইনালের আগে ৬টি ক্লাস।</span></p></div>
+      <div class="card"><div class="n">✓</div><h3><span class="en-t">Mock test with solutions</span><span class="bn-t">সমাধানসহ মক টেস্ট</span></h3><p><span class="en-t">A timed test in the final class, in your faculty's question pattern.</span><span class="bn-t">শেষ ক্লাসে সময় ধরে পরীক্ষা, আপনার শিক্ষকের প্রশ্নের ধরনে।</span></p></div>
+      <div class="card"><div class="n">∞</div><h3><span class="en-t">Support until your exam</span><span class="bn-t">পরীক্ষা পর্যন্ত সহায়তা</span></h3><p><span class="en-t">A formula sheet, solved problems and a doubt group.</span><span class="bn-t">ফর্মুলা শিট, সমাধানসহ প্রশ্ন এবং ডাউট গ্রুপ।</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="dark">
+  <div class="wrap">
+    <h2><span class="en-t">How it works</span><span class="bn-t">যেভাবে কাজ করে</span></h2>
+    <p class="sub"><span class="en-t">Everything happens by form and email. You never pay before your batch is confirmed.</span><span class="bn-t">সবকিছু ফর্ম ও ইমেইলে। ব্যাচ নিশ্চিত হওয়ার আগে কোনো পেমেন্ট নয়।</span></p>
+    <div class="grid g4">
+      <div class="disc"><div class="pc">1</div><p><b><span class="en-t">Request</span><span class="bn-t">রিকোয়েস্ট</span></b><br><span class="en-t">One student requests the course and uploads the syllabus and lectures. Friends choose "Joining a friend's request".</span><span class="bn-t">একজন কোর্স রিকোয়েস্ট করে সিলেবাস ও লেকচার আপলোড করেন। বন্ধুরা "বন্ধুর রিকোয়েস্টে যোগ দিচ্ছি" বেছে নেন।</span></p></div>
+      <div class="disc"><div class="pc">2</div><p><b><span class="en-t">We review</span><span class="bn-t">আমরা যাচাই করি</span></b><br><span class="en-t">We confirm whether the course is available.</span><span class="bn-t">কোর্সটি পড়ানো সম্ভব কিনা আমরা জানাই।</span></p></div>
+      <div class="disc"><div class="pc">3</div><p><b><span class="en-t">Batch code</span><span class="bn-t">ব্যাচ কোড</span></b><br><span class="en-t">When the batch is ready, everyone gets a batch code by email.</span><span class="bn-t">ব্যাচ প্রস্তুত হলে সবাই ইমেইলে ব্যাচ কোড পান।</span></p></div>
+      <div class="disc"><div class="pc">4</div><p><b><span class="en-t">Fee and payment</span><span class="bn-t">ফি ও পেমেন্ট</span></b><br><span class="en-t">Check your exact fee with the code, pay by bKash, and your seat is confirmed.</span><span class="bn-t">কোড দিয়ে সঠিক ফি দেখে bKash-এ পেমেন্ট করুন, সিট নিশ্চিত।</span></p></div>
+    </div>
+    <div class="btns" style="margin-top:32px">
+      <a class="btn y" href="https://forms.gle/i42Vc5EgbGH9xJpL9" target="_blank" rel="noopener"><span class="en-t">Request your course</span><span class="bn-t">কোর্স রিকোয়েস্ট করুন</span> →</a>
+      <a class="btn o" href="https://forms.gle/FcU5MDumGwfgPM1CA" target="_blank" rel="noopener"><span class="en-t">Check my fee (with a batch code)</span><span class="bn-t">আমার ফি দেখুন (ব্যাচ কোড দিয়ে)</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="fees">
+  <div class="wrap">
+    <h2><span class="en-t">Fees</span><span class="bn-t">ফি</span></h2>
+    <p class="sub"><span class="en-t">One fee per crash course. Only one discount applies per course: the highest one you qualify for. Your exact fee is emailed to you before you pay.</span><span class="bn-t">প্রতি ক্র্যাশ কোর্সে একবার ফি। প্রতি কোর্সে একটি ছাড় প্রযোজ্য: আপনার জন্য সবচেয়ে বড়টি। পেমেন্টের আগে সঠিক ফি ইমেইলে পাঠানো হয়।</span></p>
+    <div class="grid g2">
+      <div class="card" style="background:var(--ink);color:var(--paper)">
+        <div class="price"><span><span class="en-t">Crash course (Mid or Final)</span><span class="bn-t">ক্র্যাশ কোর্স (মিড বা ফাইনাল)</span></span><b>4,000 tk</b></div>
+        <div class="price"><span><span class="en-t">+ Lab practice</span><span class="bn-t">+ ল্যাব প্র্যাকটিস</span></span><b>+1,000 tk</b></div>
+        <div class="price"><span><span class="en-t">Lab only</span><span class="bn-t">শুধু ল্যাব</span></span><b>1,500 tk</b></div>
+      </div>
+      <div class="grid g2">
+        <div class="card"><div class="n">20%</div><h3><span class="en-t">Batch of 10+</span><span class="bn-t">১০+ জনের ব্যাচ</span></h3><p><span class="en-t">Everyone in the batch.</span><span class="bn-t">ব্যাচের সবার জন্য।</span></p></div>
+        <div class="card"><div class="n">20%</div><h3><span class="en-t">Mid to Final</span><span class="bn-t">মিড থেকে ফাইনাল</span></h3><p><span class="en-t">Continue the same course.</span><span class="bn-t">একই কোর্সে চালিয়ে গেলে।</span></p></div>
+        <div class="card"><div class="n">10–30%</div><h3><span class="en-t">Returning student</span><span class="bn-t">পুরনো শিক্ষার্থী</span></h3><p><span class="en-t">1 full course 10%, 2 courses 20%, more 30%.</span><span class="bn-t">১টি পূর্ণ কোর্স ১০%, ২টি ২০%, বেশি হলে ৩০%।</span></p></div>
+        <div class="card"><div class="n">20%</div><h3><span class="en-t">Low CG Club</span><span class="bn-t">Low CG Club</span></h3><p><span class="en-t">CGPA below 2.50, probation or an F retake. One time, fully confidential.</span><span class="bn-t">CGPA ২.৫০-এর নিচে, প্রবেশন বা F রিটেক। একবার, সম্পূর্ণ গোপনীয়।</span></p></div>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:15px;margin-top:22px"><span class="en-t">Refunds: if you leave after the first 2 classes, the fee for 1 class is kept and the rest is refunded; no refund after that. If a batch does not reach 5 students, you get a full refund.</span><span class="bn-t">রিফান্ড: প্রথম ২টি ক্লাসের পর চলে গেলে ১টি ক্লাসের ফি রেখে বাকি টাকা ফেরত; এরপর কোনো রিফান্ড নেই। ব্যাচে ৫ জন না হলে পুরো টাকা ফেরত।</span></p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2><span class="en-t">For students of</span><span class="bn-t">যাদের জন্য</span></h2>
+    <p class="sub"><span class="en-t">Undergraduate students of universities in and around Bashundhara.</span><span class="bn-t">বসুন্ধরা ও আশেপাশের বিশ্ববিদ্যালয়ের আন্ডারগ্র্যাজুয়েট শিক্ষার্থী।</span></p>
+    <div class="unis"><span>NSU</span><span>IUB</span><span>AIUB</span><span>BRAC University</span><span>UIU</span><span>EWU</span><span class="en-t">and nearby</span><span class="bn-t">ও আশেপাশের</span></div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2><span class="en-t">Questions</span><span class="bn-t">প্রশ্নোত্তর</span></h2>
+    <p class="sub"></p>
+    <details><summary><span class="en-t">Which courses do you teach?</span><span class="bn-t">কোন কোর্স পড়ান?</span></summary><p><span class="en-t">Undergraduate Math, Physics, Electrical, Computer and Office Management courses. Send your course through the request form and we will confirm whether it is available.</span><span class="bn-t">আন্ডারগ্র্যাজুয়েট গণিত, পদার্থবিজ্ঞান, ইলেকট্রিক্যাল, কম্পিউটার ও অফিস ম্যানেজমেন্ট কোর্স। রিকোয়েস্ট ফর্মে কোর্সটি পাঠান, পড়ানো সম্ভব কিনা আমরা জানাব।</span></p></details>
+    <details><summary><span class="en-t">Where are offline classes held?</span><span class="bn-t">অফলাইন ক্লাস কোথায় হয়?</span></summary><p><span class="en-t">Only within Bashundhara R/A. Outside Bashundhara, classes are online.</span><span class="bn-t">শুধু বসুন্ধরা আ/এ-এর মধ্যে। বসুন্ধরার বাইরে হলে ক্লাস অনলাইনে।</span></p></details>
+    <details><summary><span class="en-t">My friends want to join too. What do they do?</span><span class="bn-t">আমার বন্ধুরাও যোগ দিতে চায়। তারা কী করবে?</span></summary><p><span class="en-t">One of you submits the course request. The others open the same form, choose "Joining a friend's request" and give that friend's email. It takes a minute and needs no uploads.</span><span class="bn-t">আপনাদের একজন কোর্স রিকোয়েস্ট করুন। বাকিরা একই ফর্ম খুলে "বন্ধুর রিকোয়েস্টে যোগ দিচ্ছি" বেছে নিয়ে সেই বন্ধুর ইমেইল দিন। এক মিনিট লাগে, কোনো আপলোড লাগে না।</span></p></details>
+    <details><summary><span class="en-t">When and how do I pay?</span><span class="bn-t">কখন ও কীভাবে পেমেন্ট করব?</span></summary><p><span class="en-t">Only after your batch is ready. You get a batch code by email, check your exact fee with it, and pay by bKash through the link in your fee email. Please never pay to a number shared anywhere else.</span><span class="bn-t">শুধু ব্যাচ প্রস্তুত হওয়ার পর। ইমেইলে ব্যাচ কোড পাবেন, সেটি দিয়ে সঠিক ফি দেখবেন এবং ফি-এর ইমেইলে দেওয়া লিংক থেকে bKash-এ পেমেন্ট করবেন। অন্য কোথাও দেওয়া কোনো নম্বরে কখনো পেমেন্ট করবেন না।</span></p></details>
+    <details><summary><span class="en-t">Do you do assignments or lab reports?</span><span class="bn-t">অ্যাসাইনমেন্ট বা ল্যাব রিপোর্ট করে দেন?</span></summary><p><span class="en-t">No. CGPA Lab teaches concepts and exam preparation only. No graded assignments, lab reports or exam answers are done for students.</span><span class="bn-t">না। CGPA Lab শুধু কনসেপ্ট ও পরীক্ষার প্রস্তুতি করায়। গ্রেডেড অ্যাসাইনমেন্ট, ল্যাব রিপোর্ট বা পরীক্ষার উত্তর করে দেওয়া হয় না।</span></p></details>
+    <details><summary><span class="en-t">Is my information private?</span><span class="bn-t">আমার তথ্য কি গোপন থাকে?</span></summary><p><span class="en-t">Yes. Your details, your CGPA Lab ID and any Low CG information are never shared.</span><span class="bn-t">হ্যাঁ। আপনার তথ্য, CGPA Lab আইডি এবং Low CG-সংক্রান্ত কোনো তথ্য কখনো কারও সাথে শেয়ার করা হয় না।</span></p></details>
+  </div>
+</section>
+
+<section id="verify" class="dark">
+  <div class="wrap">
+    <h2><span class="en-t">Verify a CGPA Lab ID</span><span class="bn-t">CGPA Lab আইডি যাচাই</span></h2>
+    <p class="sub"><span class="en-t">Get your own ID, check whether an ID is genuine, or check your fee with a batch code. The result is emailed to you.</span><span class="bn-t">নিজের আইডি পান, কোনো আইডি আসল কিনা যাচাই করুন, অথবা ব্যাচ কোড দিয়ে ফি দেখুন। ফলাফল ইমেইলে পাঠানো হয়।</span></p>
+    <a class="btn y" href="https://forms.gle/FcU5MDumGwfgPM1CA" target="_blank" rel="noopener"><span class="en-t">Open the Verify form</span><span class="bn-t">Verify ফর্ম খুলুন</span> →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--paper)">CGPA Lab</b><br><span class="en-t">Run by a freelance tutor. Not affiliated with any university.</span><span class="bn-t">একজন ফ্রিল্যান্স টিউটর পরিচালিত। কোনো বিশ্ববিদ্যালয়ের সাথে সম্পর্কিত নয়।</span></div>
+    <div><span class="en-t">Questions:</span><span class="bn-t">প্রশ্ন:</span> <a href="mailto:emiliafisher13@gmail.com">emiliafisher13@gmail.com</a><br><span class="en-t">or message the CGPA Lab Facebook page</span><span class="bn-t">অথবা CGPA Lab ফেসবুক পেজে মেসেজ দিন</span></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('lang');
+  function set(bn) {
+    root.classList.toggle('bn', bn);
+    root.lang = bn ? 'bn' : 'en';
+    btn.textContent = bn ? 'English' : 'বাংলা';
+    try { localStorage.setItem('cgpalab-lang', bn ? 'bn' : 'en'); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('cgpalab-lang'); } catch (e) {}
+  set(saved === 'bn');
+  btn.addEventListener('click', function () { set(!root.classList.contains('bn')); });
+})();
+</script>
+</body>
+</html>
